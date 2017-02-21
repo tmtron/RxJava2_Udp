@@ -14,5 +14,5 @@ The [MainActivity](https://github.com/tmtron/RxJava2_Udp/blob/master/app/src/mai
 - 2 buttons `Start`/`Stop`: when you press them they will send a UDP packet to a local port (writing is done by the [UdpWriter class](https://github.com/tmtron/RxJava2_Udp/blob/master/app/src/main/java/com/tmtron/rxjava2udp/UdpWriter.java)).
 - a text-view where the received UDP-data will be appended to.
 
-The [UDP-Observable](https://github.com/tmtron/RxJava2_Udp/blob/master/app/src/main/java/com/tmtron/rxjava2udp/UdpObservable.java) will start a new Thread and listen to the UDP port.
+The [UDP-Observable](https://github.com/tmtron/RxJava2_Udp/blob/master/app/src/main/java/com/tmtron/rxjava2udp/UdpObservable.java) will create the observable that opens the UDP port and emits the data-packets.
 
