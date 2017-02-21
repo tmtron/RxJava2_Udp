@@ -16,7 +16,6 @@ import io.reactivex.Observable;
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.disposables.Disposable;
 import io.reactivex.functions.Consumer;
-import io.reactivex.schedulers.Schedulers;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -55,7 +54,6 @@ public class MainActivity extends AppCompatActivity {
         final Observable<DatagramPacket> udpObservable = UdpObservable.create(PORT_NO, 512);
 
         disposableUdpData = udpObservable
-                .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe(
                         new Consumer<DatagramPacket>() {
